@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body{
+             height: 200vh;
+         }
+
+         .changeTitle{
+             position: absolute;
+             display: inline;
+             font-size: 150px;
+             top: 20%;
+             left: 25%;
+             color: black;
+             cursor: pointer;
+             font-weight: bold;
+             transform: translateY(0%);
+             opacity: 1;
+         }
+
+        .active{
+             opacity: 0;
+             transform: translateY(100%);    
+             transition: 0.5s ease-in-out;
+             transition-delay: 0.2s;  
+         }
+
+         .halley{background-color:white;
+            position: absolute;
+             display: inline;
+             font-size: 180px;
+             top: 50%;
+             left: 22%;
+             color: transparent;
+             cursor: pointer;
+         }
+
+
+
+    </style>
+</head>
+<body>
+    
+    <div class ="changeTitle">Change Color</div>
+        <div class = "halley">ALLER VAS-Y</div>
+    
+    <script>
+        let changeTitle = document.querySelector(".changeTitle");
+
+        clickOnMe = function(){
+            document.querySelector('.changeTitle').style.color = 'orange';
+
+            window.requestAnimationFrame(function(time) {
+            window.requestAnimationFrame(function(time) {
+
+            changeTitle.classList.toggle('active');
+        });
+  });
+       }
+       
+        window.addEventListener('click', clickOnMe);
+
+    </script>
+    
+</body>
+</html>
